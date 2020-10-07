@@ -5,7 +5,7 @@ from PIL import Image, ImageFilter, ImageDraw
 
 # Open image
 try:
-    img = Image.open("pic.jpg")
+    img = Image.open("original\pic.jpg")
 except:
     print("Unable to load image")
 
@@ -55,7 +55,7 @@ filpped_img.show()
 
 
 # copy logo to my original image
-logo = Image.open("img01.jpg")
+logo = Image.open("original\img01.jpg")
 img_copy = img.copy()
 position = ((img_copy.width - logo.width), (img_copy.height - logo.height))
 img_copy.paste(logo, position)
